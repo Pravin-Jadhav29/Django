@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("../images/image.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+.container {
+    width: 60%;
+    margin: 50px auto;
+    background: rgba(255,255,255,0.9);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+form input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid gray;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+a[href*="edit"] {
+    background-color: orange;
+    color: white;
+    border-radius: 5px;
+}
+
+a[href*="delete"] {
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+}

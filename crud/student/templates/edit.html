@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Student</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("{% static 'images/image.png' %}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 50%;
+            margin: 80px auto;
+            background: rgba(255,255,255,0.9);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px black;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: 1px solid gray;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: darkgreen;
+        }
+
+        .back-btn {
+            background-color: gray;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        .back-btn:hover {
+            background-color: black;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h2>Edit Student</h2>
+
+<form method="POST" action="/update/{{ student.id }}/">
+    {% csrf_token %}
+
+    Name:
+    <input type="text" name="name" value="{{ student.name }}">
+
+    Email:
+    <input type="email" name="email" value="{{ student.email }}">
+
+    Course:
+    <input type="text" name="course" value="{{ student.course }}">
+
+    <button type="submit">Update Student</button>
+
+</form>
+
+<a href="/" class="back-btn">Back to Home</a>
+
+</div>
+
+</body>
+</html>
